@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The game (drake)</title>
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Serif+Tibetan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        body{
+            background-color:lightblue;
+        }
+        .qlabel{
+            font-size:25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .choicebutton{
+            height:25px;
+            width:25px;
+            
+        }
+        .answers{
+            height:100px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 25px;
+            opacity: 0;
+        }
+        .answerbutton{
+            background-color: yellow;
+            display:inline-block;
+            width:32px;
+            height:32px;
+            border:2px solid black;
+            border-radius: 5px;
+            transform: translateY(-10px);
+        }
+        .answerbutton:hover{
+            cursor:pointer;
+        }
+        .answerbutton:active{
+            cursor:grab;
+        }
+        .question{
+            font-size: 32px;
+        }
+        #score{
+            position:fixed;
+            transform:translate(750px, -150px);
+            background-color:white;
+            font-family: Fredoka;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:72px;">The questions</h1>
+    <br>
+    <div class="qlabel" id="score">Current score: 0/0</div><br>
+
+    <div class="question" id="question1" style="font-family:Fredoka; font-weight:bolder;">1. Grafting is one of the methods of ____</div><br>
+    <input type="radio" name="radio1" id="o1q1" class="choicebutton">
+    <label class="qlabel" id="option1q1l" for="o1q1">Organic farming</label><br>
+    <input type="radio" name="radio1" id="o2q1"class="choicebutton">
+    <label class="qlabel" id="option2q1l" for="o2q1">Natural Vegetative propagation</label><br>
+    <input type="radio" name="radio1" id="o3q1"class="choicebutton">
+    <label class="qlabel" id="option3q1l" for="o3q1">Inorganic farming</label><br>
+    <input type="radio" name="radio1" id="o4q1"class="choicebutton">
+    <label class="qlabel"id="option4q1l" for="o4q1">Artificial Vegetative Propagtion</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq1" >.</div>
+    <label class="qlabel" for="showanswerq1" id="showanswerq1l">Show answer</label>
+    <div id="answerq1" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question2" style="font-family:Fredoka; font-weight:bolder;">2. Tape is used in grafting in order to ____</div><br>
+    <input type="radio" name="radio2" id="o1q2" class="choicebutton">
+    <label class="qlabel" id="option1q2l" for="o1q2">Wrap around the scion and stock</label><br>
+    <input type="radio" name="radio2" id="o2q2"class="choicebutton">
+    <label class="qlabel" id="option2q2l" for="o2q2">Prevent infection</label><br>
+    <input type="radio" name="radio2" id="o3q2"class="choicebutton">
+    <label class="qlabel" id="option3q2l" for="o3q2">Join the scion and stock while also preventing germs</label><br>
+    <input type="radio" name="radio2" id="o4q2"class="choicebutton">
+    <label class="qlabel"id="option4q2l" for="o4q2">None of the above</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq2" >.</div>
+    <label class="qlabel" for="showanswerq2" id="showanswerq2l">Show answer</label>
+    <div id="answerq2" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question3" style="font-family:Fredoka; font-weight:bolder;">3. The bud receiving the ___ is called ___</div><br>
+    <input type="radio" name="radio3" id="o1q3" class="choicebutton">
+    <label class="qlabel" id="option1q3l" for="o1q3">Amog us, stock</label><br>
+    <input type="radio" name="radio3" id="o2q3"class="choicebutton">
+    <label class="qlabel" id="option2q3l" for="o2q3">Stock, Mr beast</label><br>
+    <input type="radio" name="radio3" id="o3q3"class="choicebutton">
+    <label class="qlabel" id="option3q3l" for="o3q3">Stock, scion</label><br>
+    <input type="radio" name="radio3" id="o4q3"class="choicebutton">
+    <label class="qlabel"id="option4q3l" for="o4q3">Scion, stock</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq3" >.</div>
+    <label class="qlabel" for="showanswerq3" id="showanswerq3l">Show answer</label>
+    <div id="answerq3" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question4" style="font-family:Fredoka; font-weight:bolder;">4. The three types of grafting are:</div><br>
+    <input type="radio" name="radio4" id="o1q4" class="choicebutton">
+    <label class="qlabel" id="option1q4l" for="o1q4">Whip or tongue grafting, cleft grafting and approach grafting</label><br>
+    <input type="radio" name="radio4" id="o2q4"class="choicebutton">
+    <label class="qlabel" id="option2q4l" for="o2q4">Tape grafting, approach grafting, glue grafting</label><br>
+    <input type="radio" name="radio4" id="o3q4"class="choicebutton">
+    <label class="qlabel" id="option3q4l" for="o3q4">Glue grafting, twig grafting, cleft grafting</label><br>
+    <input type="radio" name="radio4" id="o4q4"class="choicebutton">
+    <label class="qlabel"id="option4q4l" for="o4q4">Cleft grafting, twig grafting and approach grafting</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq4" >.</div>
+    <label class="qlabel" for="showanswerq4" id="showanswerq4l">Show answer</label>
+    <div id="answerq4" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question5" style="font-family:Fredoka; font-weight:bolder;">5. The advantages of vegetative propagation are:</div><br>
+    <input type="radio" name="radio5" id="o1q5" class="choicebutton">
+    <label class="qlabel" id="option1q5l" for="o1q5">Children having same characteristics as parent</label><br>
+    <input type="radio" name="radio5" id="o2q5"class="choicebutton">
+    <label class="qlabel" id="option2q5l" for="o2q5">Fast and certain reproduction</label><br>
+    <input type="radio" name="radio5" id="o3q5"class="choicebutton">
+    <label class="qlabel" id="option3q5l" for="o3q5">Continuation of species even in infertile plants</label><br>
+    <input type="radio" name="radio5" id="o4q5"class="choicebutton">
+    <label class="qlabel"id="option4q5l" for="o4q5">All of the above</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq5" >.</div>
+    <label class="qlabel" for="showanswerq5" id="showanswerq5l">Show answer</label>
+    <div id="answerq5" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question6" style="font-family:Fredoka; font-weight:bolder;">6. A disadvantage of vegetative propagation are:</div><br>
+    <input type="radio" name="radio6" id="o1q6" class="choicebutton">
+    <label class="qlabel" id="option1q6l" for="o1q6">Fast and certain reproduction</label><br>
+    <input type="radio" name="radio6" id="o2q6"class="choicebutton">
+    <label class="qlabel" id="option2q6l" for="o2q6">Over crowding around the parent plant</label><br>
+    <input type="radio" name="radio6" id="o3q6"class="choicebutton">
+    <label class="qlabel" id="option3q6l" for="o3q6">Plants growing wider and shorter</label><br>
+    <input type="radio" name="radio6" id="o4q6"class="choicebutton">
+    <label class="qlabel"id="option4q6l" for="o4q6">None of the above</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq6" >.</div>
+    <label class="qlabel" for="showanswerq6" id="showanswerq6l">Show answer</label>
+    <div id="answerq6" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question7" style="font-family:Fredoka; font-weight:bolder;">7. Whip or tongue grafting is called what it is because:</div><br>
+    <input type="radio" name="radio7" id="o1q7" class="choicebutton">
+    <label class="qlabel" id="option1q7l" for="o1q7">The stock look like a tongue</label><br>
+    <input type="radio" name="radio7" id="o2q7"class="choicebutton">
+    <label class="qlabel" id="option2q7l" for="o2q7">The stock has cuts, in which the scion is inserted in and due to the elasticity of wood, they are compressed together.</label><br>
+    <input type="radio" name="radio7" id="o3q7"class="choicebutton">
+    <label class="qlabel" id="option3q7l" for="o3q7"> The scion is shaped like a whip, wrapping around the stock and binding them together</label><br>
+    <input type="radio" name="radio7" id="o4q7"class="choicebutton">
+    <label class="qlabel"id="option4q7l" for="o4q7">The scion is flexible like a whip and shaped like a tongue, and sticks onto the stock.</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq7" >.</div>
+    <label class="qlabel" for="showanswerq7" id="showanswerq7l">Show answer</label>
+    <div id="answerq7" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question8" style="font-family:Fredoka; font-weight:bolder;">8. Which suits the description of grafting?</div><br>
+    <input type="radio" name="radio8" id="o1q8" class="choicebutton">
+    <label class="qlabel" id="option1q8l" for="o1q8">A single bud is cut into two pieces which both grow into seperate plants</label><br>
+    <input type="radio" name="radio8" id="o2q8"class="choicebutton">
+    <label class="qlabel" id="option2q8l" for="o2q8">A stem of a plant is put into the ground after which it develops into its own plant</label><br>
+    <input type="radio" name="radio8" id="o3q8"class="choicebutton">
+    <label class="qlabel" id="option3q8l" for="o3q8">A bud planted in soil receives another bud and the received bud grows into new plant</label><br>
+    <input type="radio" name="radio8" id="o4q8"class="choicebutton">
+    <label class="qlabel"id="option4q8l" for="o4q8">A stem is joined to a leaf with organic compost and the leaf grows into new plant.</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq8" >.</div>
+    <label class="qlabel" for="showanswerq8" id="showanswerq8l">Show answer</label>
+    <div id="answerq8" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question9" style="font-family:Fredoka; font-weight:bolder;">9. Which image best depicts cleft grafting?</div><br>
+    <input type="radio" name="radio9" id="o1q9" class="choicebutton">
+    <label class="qlabel" id="option1q9l" for="o1q9"><img src="approach.jpg"></label><br>
+    <input type="radio" name="radio9" id="o2q9"class="choicebutton">
+    <label class="qlabel" id="option2q9l" for="o2q9"><img src="layering2.jpg"></label><br>
+    <input type="radio" name="radio9" id="o3q9"class="choicebutton">
+    <label class="qlabel" id="option3q9l" for="o3q9"><img src="whip.png"></label><br>
+    <input type="radio" name="radio9" id="o4q9"class="choicebutton">
+    <label class="qlabel"id="option4q9l" for="o4q9"><img src="cleft.png"></label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq9" >.</div>
+    <label class="qlabel" for="showanswerq9" id="showanswerq9l">Show answer</label>
+    <div id="answerq9" class="answers">Did not select an answer</div> <br>
+
+    <div class="question" id="question10" style="font-family:Fredoka; font-weight:bolder;">10. Which best suits the description of approach grafting?</div><br>
+    <input type="radio" name="radio10" id="o1q10" class="choicebutton">
+    <label class="qlabel" id="option1q10l" for="o1q10">A scion and stock from individual rooted plants are taped together and the scion is later severed.</label><br>
+    <input type="radio" name="radio10" id="o2q10"class="choicebutton">
+    <label class="qlabel" id="option2q10l" for="o2q10">The scion is inserted into the hole of the stock and later the scion is taken out of the stock as a new plant</label><br>
+    <input type="radio" name="radio10" id="o3q10"class="choicebutton">
+    <label class="qlabel" id="option3q10l" for="o3q10">A stock and scion with cuts are pressed together and joined through compression.</label><br>
+    <input type="radio" name="radio10" id="o4q10"class="choicebutton">
+    <label class="qlabel"id="option4q10l" for="o4q10">The scion is larger than the stock and receives the stock</label><br>
+    <br>
+    <div class="answerbutton" id="showanswerq10" >.</div>
+    <label class="qlabel" for="showanswerq10" id="showanswerq10l">Show answer</label>
+    <div id="answerq10" class="answers">Did not select an answer</div> <br>
+    <br><br>
+    <div class="qlabel">Thats all friends, please revise the answers and study hard! Brought to you by group 2.</div>
+
+    
+
+
+
+
+
+
+    <script>
+        const q1o1 = document.getElementById("o1q1");
+        const q1o2 = document.getElementById("o2q1");
+        const q1o3 = document.getElementById("o3q1");
+        const q1o4 = document.getElementById("o4q1");
+        const q2o1 = document.getElementById("o1q2");
+        const q2o2 = document.getElementById("o2q2");
+        const q2o3 = document.getElementById("o3q2");
+        const q2o4 = document.getElementById("o4q2");
+        const q3o1 = document.getElementById("o1q3");
+        const q3o2 = document.getElementById("o2q3");
+        const q3o3 = document.getElementById("o3q3");
+        const q3o4 = document.getElementById("o4q3");
+        const q4o1 = document.getElementById("o1q4");
+        const q4o2 = document.getElementById("o2q4");
+        const q4o3 = document.getElementById("o3q4");
+        const q4o4 = document.getElementById("o4q4");
+        const q5o1 = document.getElementById("o1q5");
+        const q5o2 = document.getElementById("o2q5");
+        const q5o3 = document.getElementById("o3q5");
+        const q5o4 = document.getElementById("o4q5");
+        const q6o1 = document.getElementById("o1q6");
+        const q6o2 = document.getElementById("o2q6");
+        const q6o3 = document.getElementById("o3q6");
+        const q6o4 = document.getElementById("o4q6");
+        const q7o1 = document.getElementById("o1q7");
+        const q7o2 = document.getElementById("o2q7");
+        const q7o3 = document.getElementById("o3q7");
+        const q7o4 = document.getElementById("o4q7");
+        const q8o1 = document.getElementById("o1q8");
+        const q8o2 = document.getElementById("o2q8");
+        const q8o3 = document.getElementById("o3q8");
+        const q8o4 = document.getElementById("o4q8");
+        const q9o1 = document.getElementById("o1q9");
+        const q9o2 = document.getElementById("o2q9");
+        const q9o3 = document.getElementById("o3q9");
+        const q9o4 = document.getElementById("o4q9");
+        const q10o1 = document.getElementById("o1q10");
+        const q10o2 = document.getElementById("o2q10");
+        const q10o3 = document.getElementById("o3q10");
+        const q10o4 = document.getElementById("o4q10");
+
+        const sansq1 = document.getElementById("showanswerq1")
+        const sansq2 = document.getElementById("showanswerq2")
+        const sansq3 = document.getElementById("showanswerq3")
+        const sansq4 = document.getElementById("showanswerq4")
+        const sansq5 = document.getElementById("showanswerq5")
+        const sansq6 = document.getElementById("showanswerq6")
+        const sansq7 = document.getElementById("showanswerq7")
+        const sansq8 = document.getElementById("showanswerq8")
+        const sansq9 = document.getElementById("showanswerq9")
+        const sansq10 = document.getElementById("showanswerq10")
+        const ansq1 = document.getElementById("answerq1")
+        const ansq2 = document.getElementById("answerq2")
+        const ansq3 = document.getElementById("answerq3")
+        const ansq4 = document.getElementById("answerq4")
+        const ansq5 = document.getElementById("answerq5")
+        const ansq6 = document.getElementById("answerq6")
+        const ansq7 = document.getElementById("answerq7")
+        const ansq8 = document.getElementById("answerq8")
+        const ansq9 = document.getElementById("answerq9")
+        const ansq10 = document.getElementById("answerq10")
+        
+        const sansql1 = document.getElementById("showanswerq1l")
+        const sansql2 = document.getElementById("showanswerq2l")
+        const sansql3 = document.getElementById("showanswerq3l")
+        const sansql4 = document.getElementById("showanswerq4l")
+        const sansql5 = document.getElementById("showanswerq5l")
+        const sansql6 = document.getElementById("showanswerq6l")
+        const sansql7 = document.getElementById("showanswerq7l")
+        const sansql8 = document.getElementById("showanswerq8l")
+        const sansql9 = document.getElementById("showanswerq9l")
+        const sansql10 = document.getElementById("showanswerq10l")
+        let ansc1 = false;
+        let ansc2 = false;
+        let ansc3 = false;
+        let ansc4 = false;
+        let ansc5 = false;
+        let ansc6 = false;
+        let ansc7 = false;
+        let ansc8 = false;
+        let ansc9 = false;
+        let ansc10 = false;
+
+        let hasbeencorrect1 = false;
+        let hasbeencorrect2 = false;
+        let hasbeencorrect3 = false;
+        let hasbeencorrect4 = false;
+        let hasbeencorrect5 = false;
+        let hasbeencorrect6 = false;
+        let hasbeencorrect7 = false;
+        let hasbeencorrect8 = false;
+        let hasbeencorrect9 = false;
+        let hasbeencorrect10 = false;
+        let score = 0;
+        let totalscore = 0;
+        const responseList = [
+            [
+                "Organic farming is incorrect. The correct answer is artificial vegetative propagation because it is a method of artificial vegetative propagation as it involves artificial methods and do not occur naturally.",
+                "Natural Vegetative Propagation is incorrect. The correct answer is artificial vegetative propagation because it is a method of artificial vegetative propagation as it involves artificial methods and do not occur naturally. ",
+                "Inorganic Farming is incorrect. The correct answer is artificial vegetative propagation because it is a method of artificial vegetative propagation as it involves artificial methods and do not occur naturally.",
+                "You got it correct!!! It is correct because it is a method of artificial vegetative propagation as it involves artificial methods and do not occur naturally."
+            ],
+            [
+                "Wrap around the scion and stock is incorrect as it has function is not just to wrap around the scion and stock, it joins them.",
+                "Prevent from infection is correct, but it is not completed as the tape also joins the scion and stock together.",
+                "You got it correct!!!. It is correct as the tape binds the scion and stock together, while also preventing the entrance of germs.",
+                "None of the above is incorrect. From the above, one of them is correct."
+                
+            ],
+            [
+                "amog us, stock is incorrect. Sussy baka is not equivalent to the correct answer",
+                "Stock, mr beast is incorrect. 200 billion subscribers has no effect on vegetative propagation",
+                "Stock, scion is almost correct. Scion is inserted into the stock, and stock receives the scion.",
+                "Nice, you got it correct. The scion is received by stock in grafting."
+            ],
+            [
+                "Nice, you got it correct!",
+                "Wrong, tape grafting does not exist",
+                "Incorrect, what the hell is glue grafting and twig grafting?",
+                "Wrong because twig grafting is not a type of grafting"
+            ],
+            [
+                "Answer is correct, but it is missing two other benefits",
+                "Answer is correct, but it is missing two other benefits",
+                "Answer is correct, but it is missing two other benefits",
+                "Nice, you got it correct!!! All the above are advantages"
+            ],
+            [
+                "Answer is wrong as this is an advantage of vegatative propagation",
+                "Answer is correct as this is a problem which occurs leading to lack of space around parent plant",
+                "Answer is wrong because this does not occur at all during vegatative propagation",
+                "Answer is wrong as one of the above answers is correct."
+            ],
+            [
+                "This answer is wrong as, indeed, the scion does not look like a tongue",
+                "This answer is correct as this shows the mechanism of how the whip or tongue grafting works",
+                "This answer is wrong as the scion is not shaped like a whip",
+                "This answer is wrong cause it does not resemble a whip or a tongue and it does not stick, it compresses itself together."
+            ],
+            [
+                "This answer is incorrect as this is the description of grafting",
+                "This answer is incorrect as this is the description of layering",
+                "Correct! It is correct as this is the description of grafting",
+                "This answer is incorrect as this method of artificial vegatative propagation does not exist."
+            ],
+            [
+                "Incorrect. This image depicts approach grafting",
+                "Incorrect. This image depicts layering",
+                "Incorrect. This image depicts whip or tongue grafting",
+                "Nice!!! This depicts cleft grafting"
+            ],
+            [
+                "Correct! In approach grafting, they are from individual plants that are later severed.",
+                "Incorrect. There is no type of grafting where a hole is involved",
+                "Incorrect. This describes whip or tongue grafting.",
+                "Incorrect. The stock always receives the scion, and remains same for all types of grafting."
+            ]
+        ]
+        function hoverEnter(element){
+            
+            if (element.style.backgroundColor == "yellow"){
+                element.style.backgroundColor = "yellowgreen"
+            } else if(element.style.backgroundColor == "red"){
+                element.style.backgroundColor = "darkred"
+            } else if(element.style.backgroundColor == "green"){
+                element.style.backgroundColor = "darkgreen"
+            }
+        }
+        function hoverExit(element){
+        
+            if (element.style.backgroundColor == "darkred"){
+                element.style.backgroundColor = "red";
+            } else if(element.style.backgroundColor == "darkgreen"){
+                element.style.backgroundColor = "green";
+            } else{
+                element.style.backgroundColor = "yellow";
+            }
+        }
+        
+function Ans(bool, qo1, qo2, qo3, qo4, butbox, question, ansbox, label, ca) {
+    if (bool == false) {
+        if (qo1.checked) {
+            ansbox.textContent = responseList[question][0];
+            if (ca == 0) {
+                butbox.style.backgroundColor = "darkgreen";
+                score += 1;
+                if (question == 0) {
+                    hasbeencorrect1 = true;
+                } else if (question == 1) {
+                    hasbeencorrect2 = true;
+                } else if (question == 2) {
+                    hasbeencorrect3 = true;
+                } else if (question == 3) {
+                    hasbeencorrect4 = true;
+                } else if (question == 4) {
+                    hasbeencorrect5 = true;
+                } else if (question == 5) {
+                    hasbeencorrect6 = true;
+                } else if (question == 6) {
+                    hasbeencorrect7 = true;
+                } else if (question == 7) {
+                    hasbeencorrect8 = true;
+                } else if (question == 8) {
+                    hasbeencorrect9 = true;
+                } else if (question == 9) {
+                    hasbeencorrect10 = true;
+                }
+                
+            } else{
+                butbox.style.backgroundColor = "darkred"
+            }
+        } else if (qo2.checked) {
+            ansbox.textContent = responseList[question][1];
+            if (ca == 1) {
+                butbox.style.backgroundColor = "darkgreen";
+                score += 1;
+                if (question == 0) {
+                    hasbeencorrect1 = true;
+                } else if (question == 1) {
+                    hasbeencorrect2 = true;
+                } else if (question == 2) {
+                    hasbeencorrect3 = true;
+                } else if (question == 3) {
+                    hasbeencorrect4 = true;
+                } else if (question == 4) {
+                    hasbeencorrect5 = true;
+                } else if (question == 5) {
+                    hasbeencorrect6 = true;
+                } else if (question == 6) {
+                    hasbeencorrect7 = true;
+                } else if (question == 7) {
+                    hasbeencorrect8 = true;
+                } else if (question == 8) {
+                    hasbeencorrect9 = true;
+                } else if (question == 9) {
+                    hasbeencorrect10 = true;
+                }
+            } else {
+                butbox.style.backgroundColor = "darkred";
+            }
+        } else if (qo3.checked) {
+            ansbox.textContent = responseList[question][2];
+            if (ca == 2) {
+                butbox.style.backgroundColor = "darkgreen";
+                score += 1;
+                if (question == 0) {
+                    hasbeencorrect1 = true;
+                } else if (question == 1) {
+                    hasbeencorrect2 = true;
+                } else if (question == 2) {
+                    hasbeencorrect3 = true;
+                } else if (question == 3) {
+                    hasbeencorrect4 = true;
+                } else if (question == 4) {
+                    hasbeencorrect5 = true;
+                } else if (question == 5) {
+                    hasbeencorrect6 = true;
+                } else if (question == 6) {
+                    hasbeencorrect7 = true;
+                } else if (question == 7) {
+                    hasbeencorrect8 = true;
+                } else if (question == 8) {
+                    hasbeencorrect9 = true;
+                } else if (question == 9) {
+                    hasbeencorrect10 = true;
+                }
+            } else {
+                butbox.style.backgroundColor = "darkred";
+            }
+        } else if (qo4.checked) {
+            ansbox.textContent = responseList[question][3];
+            if (ca == 3) {
+                butbox.style.backgroundColor = "darkgreen";
+                score += 1;
+                if (question == 0) {
+                    hasbeencorrect1 = true;
+                } else if (question == 1) {
+                    hasbeencorrect2 = true;
+                } else if (question == 2) {
+                    hasbeencorrect3 = true;
+                } else if (question == 3) {
+                    hasbeencorrect4 = true;
+                } else if (question == 4) {
+                    hasbeencorrect5 = true;
+                } else if (question == 5) {
+                    hasbeencorrect6 = true;
+                } else if (question == 6) {
+                    hasbeencorrect7 = true;
+                } else if (question == 7) {
+                    hasbeencorrect8 = true;
+                } else if (question == 8) {
+                    hasbeencorrect9 = true;
+                } else if (question == 9) {
+                    hasbeencorrect10 = true;
+                }
+            } else {
+                butbox.style.backgroundColor = "darkred";
+            }
+        } else {
+            window.alert("Nigga choose an option or drake.");
+            return null;
+        }
+        totalscore += 1;
+        document.getElementById("score").textContent = `Current Score: ${score}/${totalscore}`;
+        label.textContent = "Hide answer";
+        if (question == 0) {
+            ansc1 = true;
+        } else if (question == 1) {
+            ansc2 = true;
+        } else if (question == 2) {
+            ansc3 = true;
+        } else if (question == 3) {
+            ansc4 = true;
+        } else if (question == 4) {
+            ansc5 = true;
+        } else if (question == 5) {
+            ansc6 = true;
+        } else if (question == 6) {
+            ansc7 = true;
+        } else if (question == 7) {
+            ansc8 = true;
+        } else if (question == 8) {
+            ansc9 = true;
+        } else if (question == 9) {
+            ansc10 = true;
+        }
+        ansbox.style.opacity = "1";
+    } else {
+        label.textContent = "Show answer";
+        ansbox.style.opacity = "0";
+        if (question == 0) {
+            ansc1 = false;
+            if (hasbeencorrect1 == true){
+                score -= 1;
+                hasbeencorrect1 = false;
+
+            }
+        } else if (question == 1) {
+            ansc2 = false;
+            if (hasbeencorrect2 == true){
+                score -= 1;
+                hasbeencorrect2 = false;
+                
+            }
+        } else if (question == 2) {
+            ansc3 = false;
+            if (hasbeencorrect3 == true){
+                score -= 1;
+                hasbeencorrect3 = false;
+                
+            }
+        } else if (question == 3) {
+            ansc4 = false;
+            if (hasbeencorrect4 == true){
+                score -= 1;
+                hasbeencorrect4 = false;
+                
+            }
+        } else if (question == 4) {
+            ansc5 = false;
+            if (hasbeencorrect5 == true){
+                score -= 1;
+                hasbeencorrect5 = false;
+                
+            }
+        } else if (question == 5) {
+            ansc6 = false;
+            if (hasbeencorrect6 == true){
+                score -= 1;
+                hasbeencorrect6 = false;
+                
+            }
+        } else if (question == 6) {
+            ansc7 = false;
+            if (hasbeencorrect7 == true){
+                score -= 1;
+                hasbeencorrect7 = false;
+                
+            }
+        } else if (question == 7) {
+            ansc8 = false;
+            if (hasbeencorrect8 == true){
+                score -= 1;
+                hasbeencorrect8 = false;
+                
+            }
+        } else if (question == 8) {
+            ansc9 = false;
+            if (hasbeencorrect9 == true){
+                score -= 1;
+                hasbeencorrect9 = false;
+                
+            }
+        } else if (question == 9) {
+            ansc10 = false;
+            if (hasbeencorrect10 == true){
+                score -= 1;
+                hasbeencorrect10 = false;
+                
+            }
+        }
+        totalscore -=1
+        document.getElementById('score').textContent = `Current Score: ${score}/${totalscore}`
+        butbox.style.backgroundColor = "yellowgreen";
+    }
+}
+
+
+
+        sansq1.addEventListener("mouseenter", function(){hoverEnter(sansq1)})
+        sansq1.addEventListener("mouseleave", function(){hoverExit(sansq1)})
+        sansq1.addEventListener("click", function(){Ans(ansc1, q1o1, q1o2, q1o3, q1o4, sansq1, 0, ansq1, sansql1, 3)});
+        sansq2.addEventListener("mouseenter", function(){hoverEnter(sansq2)})
+        sansq2.addEventListener("mouseleave", function(){hoverExit(sansq2)})
+        sansq2.addEventListener("click", function(){Ans(ansc2, q2o1, q2o2, q2o3, q2o4, sansq2, 1, ansq2, sansql2, 2)});
+        sansq3.addEventListener("mouseenter", function(){hoverEnter(sansq3)})
+        sansq3.addEventListener("mouseleave", function(){hoverExit(sansq3)})
+        sansq3.addEventListener("click", function(){Ans(ansc3, q3o1, q3o2, q3o3, q3o4, sansq3, 2, ansq3, sansql3, 3)});
+        sansq4.addEventListener("mouseenter", function(){hoverEnter(sansq4)})
+        sansq4.addEventListener("mouseleave", function(){hoverExit(sansq4)})
+        sansq4.addEventListener("click", function(){Ans(ansc4, q4o1, q4o2, q4o3, q4o4, sansq4, 3, ansq4, sansql4, 0)});
+        sansq5.addEventListener("mouseenter", function(){hoverEnter(sansq5)})
+        sansq5.addEventListener("mouseleave", function(){hoverExit(sansq5)})
+        sansq5.addEventListener("click", function(){Ans(ansc5, q5o1, q5o2, q5o3, q5o4, sansq5, 4, ansq5, sansql5, 3)});
+        sansq6.addEventListener("mouseenter", function(){hoverEnter(sansq6)})
+        sansq6.addEventListener("mouseleave", function(){hoverExit(sansq6)})
+        sansq6.addEventListener("click", function(){Ans(ansc6, q6o1, q6o2, q6o3, q6o4, sansq6, 5, ansq6, sansql6, 1)});
+        sansq7.addEventListener("mouseenter", function(){hoverEnter(sansq7)})
+        sansq7.addEventListener("mouseleave", function(){hoverExit(sansq7)})
+        sansq7.addEventListener("click", function(){Ans(ansc7, q7o1, q7o2, q7o3, q7o4, sansq7, 6, ansq7, sansql7, 1)});
+        sansq8.addEventListener("mouseenter", function(){hoverEnter(sansq8)})
+        sansq8.addEventListener("mouseleave", function(){hoverExit(sansq8)})
+        sansq8.addEventListener("click", function(){Ans(ansc8, q8o1, q8o2, q8o3, q8o4, sansq8, 7, ansq8, sansql8, 2)});
+        sansq9.addEventListener("mouseenter", function(){hoverEnter(sansq9)})
+        sansq9.addEventListener("mouseleave", function(){hoverExit(sansq9)})
+        sansq9.addEventListener("click", function(){Ans(ansc9, q9o1, q9o2, q9o3, q9o4, sansq9, 8, ansq9, sansql9, 3)});
+        sansq10.addEventListener("mouseenter", function(){hoverEnter(sansq10)})
+        sansq10.addEventListener("mouseleave", function(){hoverExit(sansq10)})
+        sansq10.addEventListener("click", function(){Ans(ansc10, q10o1, q10o2, q10o3, q10o4, sansq10, 9, ansq10, sansql10, 0)});
+
+    
+
+    
+    </script>
+</body>
+</html>
